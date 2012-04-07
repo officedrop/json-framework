@@ -55,7 +55,12 @@ typedef enum {
 
 @class SBJsonUTF8Stream;
 
-@interface SBJsonTokeniser : NSObject 
+@interface SBJsonTokeniser : NSObject {
+    
+    NSString *_error;
+    SBJsonUTF8Stream *_stream;
+    
+}
 
 @property (strong) SBJsonUTF8Stream *stream;
 @property (copy) NSString *error;
